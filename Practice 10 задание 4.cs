@@ -1,0 +1,56 @@
+﻿using System;
+
+class Point
+{
+    private double x;
+    private double y;
+
+    public double X
+    {
+        get { return x; }
+        set { x = value; }
+    }
+
+    public double Y
+    {
+        get { return y; }
+        set { y = value; }
+    }
+
+    public Point(double x, double y)
+    {
+        X = x;
+        Y = y;
+    }
+
+    public Point(double value) : this(value, value) { }
+
+    public Point() : this(0, 0) { }
+
+    public void Show()
+
+    {
+
+        Console.WriteLine($"Точка: ({X}, {Y})");
+
+    }
+}
+
+class Program
+
+{
+
+    static void Main(string[] args)
+
+    {
+
+        Point p1 = new Point(2.5, 4.2);
+        Point p2 = new Point(4);
+        Point p3 = new Point();
+
+        p1.Show();
+        p2.Show();
+        p3.Show();
+
+    }
+}
